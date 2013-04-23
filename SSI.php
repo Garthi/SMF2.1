@@ -1951,7 +1951,7 @@ function ssi_recentAttachments($num_attachments = 10, $attachment_ext = array(),
 	$attachments = array();
 	while ($row = $smcFunc['db_fetch_assoc']($request))
 	{
-		$filename = preg_replace('~&amp;#(\\d{1,7}|x[0-9a-fA-F]{1,6});~', '&#\\1;', htmlspecialchars($row['filename']));
+		$filename = preg_replace('~&amp;#(\\d{1,7}|x[0-9a-fA-F]{1,6});~', '&#\\1;', $smcFunc['htmlspecialchars']($row['filename']));
 
 		// Is it an image?
 		$attachments[$row['id_attach']] = array(

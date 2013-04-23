@@ -398,7 +398,7 @@ template_ssi_above();
 				ssi_recentTopics() is fetched using the array method, to allow further customizations on the output.
 
 				<h3>Code</h3>
-				<div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code"><?php echo htmlspecialchars(template_homepage_sample1('source')); ?></code>
+				<div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code"><?php echo $smcFunc['htmlspecialchars'](template_homepage_sample1('source')); ?></code>
 				<h3>Result</h3>
 				<iframe src="?view=home1" width="99%" height="300"></iframe>
 			</div>

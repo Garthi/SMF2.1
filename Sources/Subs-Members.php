@@ -538,7 +538,7 @@ function registerMember(&$regOptions, $return_errors = false)
 	);
 	// @todo Separate the sprintf?
 	if ($smcFunc['db_num_rows']($request) != 0)
-		$reg_errors[] = array('lang', 'email_in_use', false, array(htmlspecialchars($regOptions['email'])));
+		$reg_errors[] = array('lang', 'email_in_use', false, array($smcFunc['htmlspecialchars']($regOptions['email'])));
 	$smcFunc['db_free_result']($request);
 
 	// If we found any errors we need to do something about it right away!
